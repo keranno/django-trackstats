@@ -148,7 +148,7 @@ class AbstractStatisticQuerySet(models.QuerySet):
 
 class AbstractStatistic(models.Model):
     metric = models.ForeignKey(Metric, on_delete=models.PROTECT)
-    value = models.BigIntegerField(
+    value = models.FloatField(
         # To support storing that no data is available, use: NULL
         null=True)
     period = models.IntegerField(choices=PERIOD_CHOICES)
