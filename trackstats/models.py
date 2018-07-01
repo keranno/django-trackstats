@@ -296,6 +296,6 @@ class StatisticByDateAndObject(
     def object_representation(self):
         from django.contrib.contenttypes.models import ContentType
 
-        current_type = ContentType.objects.get(id=self.object_type)
+        current_type = ContentType.objects.get(id=self.object_type_id)
         content_element = current_type.get_object_for_this_type(id=self.object_id)
         return str(content_element)
