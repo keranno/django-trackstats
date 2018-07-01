@@ -107,6 +107,7 @@ class StatisticByDateAndObjectAdmin(StatisticGraphMixin, admin.ModelAdmin):
         'metric',
         'object_type',
         'object_id',
+        'object_representation',
         'value'
     )
     date_hierarchy = 'date'
@@ -114,7 +115,9 @@ class StatisticByDateAndObjectAdmin(StatisticGraphMixin, admin.ModelAdmin):
         'date',
         'period',
         'metric__domain',
-        'metric')
+        'metric',
+        'object_id',
+    )
 
 #            stat = StatisticByDate.objects.last()
 #            initial = {}
